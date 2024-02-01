@@ -1,0 +1,6 @@
+{:tasks 
+ {start-tailwind 
+  (shell {:dir "/Users/fay/Desktop/Code/typescript/kiggysite"} 
+         "npx tailwindcss -i style.css -o ./src/App.css --watch")
+  fmt (shell {:dir "/Users/fay/Desktop/Code/typescript/kiggysite"}
+             "npx prettier ./src/**/*.tsx --single-quote --no-config -w --plugin prettier-plugin-tailwindcss")}}
