@@ -1,20 +1,18 @@
-import { Accessor, createSignal, For, Setter, Show } from 'solid-js';
-import { Image, ImageSize, LazyImage, fadeIn, getImagePath } from './Image';
-import { Header } from './Header';
-import { always, type PageFocus } from '../lib';
+import { createSignal, For, Setter, Show } from 'solid-js';
+import { ImageSize, LazyImage, getImagePath } from './Image';
+import { type PageFocus } from '../lib';
 import { FocusImage } from './Focus';
 
 type Image = { title: string; layout: string };
-const sectionSeparator = 'mt-16';
+const sectionSeparator = 'mt-12 md:mt-16 lg:mt-32';
 const images: Image[] = [
-  { title: 'dino', layout: 'col-span-4 row-span-1' },
-  // TODO: try to make 'painting' take up one row and 'widdo' take up 3
-  { title: 'painting', layout: 'col-span-2 row-span-auto' },
-  { title: 'widdo', layout: `col-span-2 row-span-auto` },
-  { title: 'mirror', layout: `col-span-4 row-span-1` },
-  { title: 'character', layout: 'col-span-2 row-span-1' },
-  { title: 'guy', layout: 'col-span-2 row-span-1' },
-  { title: 'void', layout: `col-span-4 row-span-2` },
+  { title: 'dino', layout: 'col-span-4' },
+  { title: 'painting', layout: 'col-span-2' },
+  { title: 'widdo', layout: `col-span-2` },
+  { title: 'mirror', layout: `col-span-4 ${sectionSeparator}` },
+  { title: 'character', layout: 'col-span-2' },
+  { title: 'guy', layout: 'col-span-2' },
+  { title: 'void', layout: `col-span-4` },
   { title: 'tree', layout: `col-span-4 ${sectionSeparator}` },
   { title: 'tree-bw', layout: `col-span-2 col-start-2` },
   { title: 'porch', layout: `col-span-4 ${sectionSeparator}` },
@@ -32,7 +30,7 @@ const galleryImageBaseClass = 'shadow-sm w-auto h-auto';
 
 const Gallery = ({ onClick }: GalleryProps) => {
   return (
-    <div class="mx-12 mb-16 mt-8 grid grid-cols-4 grid-rows-4 gap-4 bg-slate-50">
+    <div class="mx-12 mb-16 mt-8 grid grid-cols-4 gap-4 bg-slate-50">
       <For each={images}>
         {({ title, layout }) => {
           return (
@@ -44,7 +42,6 @@ const Gallery = ({ onClick }: GalleryProps) => {
                 onClick(title);
               }}
               className={galleryImageBaseClass}
-              onload={fadeIn(title, galleryImageBaseClass)}
             />
           );
         }}

@@ -1,7 +1,6 @@
-import { Header } from './Header';
 import type { PageFocus } from '../lib';
 import { For, Setter, Show, createSignal } from 'solid-js';
-import { ImageSize, LazyImage, fadeIn, getImagePath } from './Image';
+import { ImageSize, LazyImage, getImagePath } from './Image';
 import { FocusImage } from './Focus';
 
 const heavyJan = [

@@ -1,4 +1,4 @@
-import { Ref, createEffect, createSignal, onCleanup, onMount } from 'solid-js';
+import { Ref, createSignal, onCleanup, onMount } from 'solid-js';
 import { JSX } from 'solid-js/h/jsx-runtime';
 
 export const enum ImageSize {
@@ -23,27 +23,6 @@ export const getImagePath = (title: string, size: ImageSize): string => {
   return `./images/${title}${sizeToPath[size]}.avif`;
 };
 
-export type ImageProps = {
-  id?: string;
-  title: string;
-  className?: string;
-  click?: () => void;
-  onload?: any;
-};
-
-export const Image = ({ id, title, className, click, onload }: ImageProps) => {
-  return (
-    <img
-      loading="lazy"
-      onLoad={onload}
-      id={id}
-      src={title}
-      class={className}
-      onclick={click}
-    ></img>
-  );
-};
-
 const createObserver = (callback: (_: any) => any, options = {}) => {
   const defaultOptions = {
     threshold: 0.5,
@@ -54,7 +33,12 @@ const createObserver = (callback: (_: any) => any, options = {}) => {
 
 // Lazy loaded image that loads on intersection w/ viewport, and then fades
 // opacity in once image is loaded
-interface LazyImageProps extends ImageProps {
+interface LazyImageProps {
+  id?: string;
+  title: string;
+  className?: string;
+  click?: () => void;
+  onload?: any;
   parentClass: string;
 }
 export const LazyImage = (props: LazyImageProps) => {
@@ -101,14 +85,4 @@ export const LazyImage = (props: LazyImageProps) => {
       />
     </div>
   );
-};
-
-// Fade in images
-const fullOpacity = 'opacity-100';
-export const fadeIn = (id: string, baseClass: string) => {
-  return () => {
-    const elt = document.getElementById(id);
-    if (elt) elt.className = `${baseClass}${fullOpacity}`;
-    else throw new Error('Image ID error');
-  };
 };
