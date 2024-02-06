@@ -47,7 +47,6 @@ export const LazyImage = (props: LazyImageProps) => {
   const observer = createObserver((entries) => {
     entries.forEach((entry: any) => {
       if (entry.isIntersecting) {
-        console.log(`Intersecting: ${props.title}\n`);
         setVisible(true);
         observer.unobserve(entry.target);
       }

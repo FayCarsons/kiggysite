@@ -77,21 +77,16 @@ const Mail = () => {
   </svg>;
 };
 
+// No LinkedIn currently, add when Kiggy makes an account :)
+
 const Footer = () => {
   return (
-    <footer class="flex justify-center items-center space-x-4 lg:space-x-8 bg-slate-50 p-4">
-      <a href="instagram.com/k1ggy" target="_blank" rel="noopener noreferrer">
+    <footer class="flex justify-center items-center space-x-8 lg:space-x-16 bg-slate-50 p-4">
+      <a href="https://instagram.com/k1ggy" target="_blank" rel="noopener noreferrer">
         <Instagram />
       </a>
-      <a href="twitter.com/k1ggy" target="_blank" rel="noopener noreferrer">
+      <a href="https://twitter.com/k1ggy" target="_blank" rel="noopener noreferrer">
         <Twitter />
-      </a>
-      <a
-        href="linkedin.com/kristenrankin"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        <LinkedIn />
       </a>
       <a
         href="mailto:kristen.rankinarts@gmail.com"
