@@ -7,7 +7,9 @@
     "dev": "vite",
     "build": "tsc && vite build",
     "preview": "vite preview",
-    "deploy": "npm run build && scp /Users/fay/Desktop/Code/typescript/kiggysite/dist 6nosis@kiggyserve.local:/var/www/kiggysite"
+    "tailwind": "npx tailwindcss -i style.css -o ./src/App.css --watch",
+    "deploy": "npm run build && scp /Users/fay/Desktop/Code/typescript/kiggysite/dist 6nosis@kiggyserve.local:/var/www/kiggysite",
+    "fmt": "npx prettier ./src/**/*.tsx --single-quote --no-config -w --plugin prettier-plugin-tailwindcss"
   },
   "dependencies": {
     "@solidjs/router": "^0.10.9",
