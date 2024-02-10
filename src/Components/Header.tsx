@@ -1,23 +1,24 @@
 import { getIconPath } from './Image';
 
 export const Header = () => {
+  const textSizing = "text-xxs sm:text-xs md:text-sm lg:text-md xl:text-lg"
   const navClass =
-    'font-palatino tracking-[0.25em] text-sm sm:text-md md:text-lg';
-  const dotClass = 'm-0 p-0 text-center text-sm sm:text-md md:text-lg';
+    `font-palatino tracking-[0.25em] ${textSizing}`;
+  const dotClass = `m-0 p-0 text-center ${textSizing}`;
   return (
-    <header class="mt-2 flex w-screen flex-col items-center justify-center">
+    <header class="mt-8 flex w-screen flex-col items-center justify-center mb-8 md:mb-24">
       <img
         class="mb-2 aspect-auto h-5/6 w-1/4 object-fill"
         src={getIconPath('logo')}
       />
       <img
-        class="mb-2 h-3/4 w-3/4 object-cover md:mb-4"
+        class="mb-2 h-3/4 w-8/12 sm:w-1/2 object-cover"
         src={getIconPath('title')}
       />
-      <p class="sm:text-md mb-4 font-palatino text-xs tracking-[0.5em] md:mb-8 md:text-xl">
+      <p class={`mb-4 font-palatino tracking-[0.5em] md:mb-8 ${textSizing}`}>
         Visual Development and Illustration
       </p>
-      <div class="flew-row space-between flex justify-between space-x-8">
+      <div class="flew-row space-between flex justify-between space-x-4 sm:space-x-6 md:space-x-8 lg:space-x-10 xl:space-x-12">
         <a class={navClass} href="/">
           home
         </a>

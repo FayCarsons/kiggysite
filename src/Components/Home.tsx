@@ -1,6 +1,6 @@
 import { createSignal, For, Setter, Show } from 'solid-js';
 import { ImageSize, LazyImage, getImagePath } from './Image';
-import { type PageFocus } from '../lib';
+import { Page, type PageFocus } from '../lib';
 import { FocusImage } from './Focus';
 
 type Image = { title: string; layout: string };
@@ -37,7 +37,7 @@ const Gallery = ({ onClick }: GalleryProps) => {
             <LazyImage
               parentClass={`max-h-fit ${layout}`}
               id={title}
-              title={getImagePath(title, ImageSize.Gallery)}
+              title={getImagePath(title, ImageSize.Gallery, Page.Home)}
               click={() => {
                 onClick(title);
               }}
@@ -62,7 +62,7 @@ export const Home = () => {
           </>
         }
       >
-        <FocusImage title={focus() as string} onClick={setFocus} />
+        <FocusImage title={focus() as string} onClick={setFocus} page={Page.Home} />
       </Show>
     </div>
   );

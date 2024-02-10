@@ -1,27 +1,29 @@
-import type { PageFocus } from '../lib';
+import { Page, type PageFocus } from '../lib';
 import { For, Setter, Show, createSignal } from 'solid-js';
 import { ImageSize, LazyImage, getImagePath } from './Image';
 import { FocusImage } from './Focus';
 
 const heavyJan = [
-  'hj_snowpond',
-  'hj_glacier',
-  'hj_pond',
-  'hj_kitchen',
-  'hj_trees',
-  'hj_liminal',
-  'hj_beach',
   'hj_block',
   'hj_laundry',
-  'hj_aquarium',
-  'hj_couch',
-  'hj_bathroom',
-  'hj_forest',
-  'hj_flowers',
   'hj_snow',
-  'hj_graffiti',
-  'hj_river',
+  'hj_aquarium',
+  'hj_flowers',
+  'hj_beach',
   'hj_restaurant',
+  'hj_pond',
+  'hj_couch',
+  'hj_forest',
+  'hj_snowpond',
+  'hj_liminal',
+  'hj_glacier',
+  'hj_bathroom',
+  'hj_river',
+  'hj_trees',
+  'hj_kitchen',
+  'hj_graffiti',
+  'hj_impress',
+  'hj_sunset'
 ];
 
 // Grouped together by layout in UI
@@ -75,7 +77,7 @@ const HeavyJan = (props: GalleryProps) => {
         {(title) => (
           <LazyImage
             parentClass="aspect-square"
-            title={getImagePath(title, ImageSize.Gallery)}
+            title={getImagePath(title, ImageSize.Gallery, Page.Works)}
             className={hjImageBaseClass}
             click={() => props.click(title)}
           />
@@ -92,7 +94,7 @@ const PersonalWorks = (props: GalleryProps) => {
         {({ title, layout }) => (
           <LazyImage
             parentClass={layout}
-            title={getImagePath(title, ImageSize.Gallery)}
+            title={getImagePath(title, ImageSize.Gallery, Page.Works)}
             className="h-auto w-full"
             click={() => props.click(title)}
           />
@@ -121,6 +123,7 @@ export const Works = () => {
         <FocusImage
           title={focus() as string}
           onClick={() => setFocus(null)}
+          page={Page.Works}
         ></FocusImage>
       </Show>
     </>

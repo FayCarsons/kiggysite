@@ -1,4 +1,4 @@
-import template from '/images/kiggy-full.png';
+import template from '/images/about/kiggy-full.png';
 
 export const About = () => {
   return (

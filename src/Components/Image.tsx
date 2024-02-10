@@ -1,6 +1,8 @@
 import { Ref, createSignal, onCleanup, onMount } from 'solid-js';
 import { JSX } from 'solid-js/h/jsx-runtime';
 
+import { Page, pageToPath } from '../lib'
+
 export const enum ImageSize {
   Thumb = 0,
   Gallery = 1,
@@ -19,8 +21,8 @@ export const getIconPath = (title: string): string => {
 };
 
 // Get large WEBP images for gallery and single image view
-export const getImagePath = (title: string, size: ImageSize): string => {
-  return `./images/${title}${sizeToPath[size]}.avif`;
+export const getImagePath = (title: string, size: ImageSize, page: Page): string => {
+  return `./images/${pageToPath[page]}/${title}${sizeToPath[size]}.avif`;
 };
 
 const createObserver = (callback: (_: any) => any, options = {}) => {

@@ -1,15 +1,16 @@
 import { Ref, Setter, onCleanup, onMount } from "solid-js";
-import { PageFocus } from "../lib";
+import { Page, PageFocus } from "../lib";
 import { ImageSize, getImagePath } from "./Image";
 
 type FocusProps = {
   title: string;
+  page: Page,
   onClick: Setter<PageFocus>;
 };
 
 const focusBaseClass = "w-auto max-h-screen";
 
-export const FocusImage = ({ title, onClick }: FocusProps) => {
+export const FocusImage = ({ title, page, onClick }: FocusProps) => {
   let imageRef: Ref<HTMLImageElement> | undefined = undefined;
 
   onMount(() => {
@@ -33,7 +34,7 @@ export const FocusImage = ({ title, onClick }: FocusProps) => {
       <div class="mx-4 flex flex-col items-center justify-center">
         <img
           id={title}
-          src={getImagePath(title, ImageSize.Focus)}
+          src={getImagePath(title, ImageSize.Focus, page)}
           class={focusBaseClass}
           onClick={() => onClick(null)}
           ref={imageRef}

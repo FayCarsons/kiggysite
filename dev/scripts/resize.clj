@@ -18,8 +18,6 @@
            :clear :c}
    :coerce {:clear boolean}})
 
-(parse-opts ["--input" "./sdf/afgga/g" "-o" "./bingus.txt" "-s" "50"] cli-opts)
-
 (def args (parse-opts *command-line-args* {:spec cli-opts}))
 (def src-dir (:i args))
 (def out-dir (:o args))
@@ -36,12 +34,14 @@
                           (map fs/file-name 
                                (fs/list-dir src-dir))))
 
-(defn shrink! [path scale-expr out-path]
-  (println (sh "ffmpeg" "-i"
-               path "-vf"
-               scale-expr
-               out-path
-               :dir src-dir)))
+(defn shrink! [path out-path scale]
+  (let [cmd (mapv str
+                  (vector "magick" "convert"
+                          (when scale
+                            (str "-resize " scale "% "))
+                          src-dir "/" path
+                          out-path))]
+    (println (apply sh cmd))))
 
 (defn split-path [path]
   (let [full (s/replace path #"\s" "")
@@ -49,13 +49,8 @@
     [full wo-extension]))
 
 (doseq [path dir-contents]
-  (let [scale-expr (fn [scale]
-                     (str "scale=iw*" scale "/100:ih*" scale "/100"))
-        [_ wo-extension] (split-path path)
-        med-scale (scale-expr 90)
-        thumb-scale (scale-expr 10)
-        med-out (str out-dir "/" wo-extension "_medium.avif")
-        thumb-out (str out-dir "/" wo-extension "_thumbnail.avif")]
-    (println (sh "ffmpeg" "-i" (str src-dir "/" path) "-compression_level" "0" (str out-dir "/" wo-extension ".avif")))
-    (shrink! path med-scale med-out)
-    (shrink! path thumb-scale thumb-out)))
+  (let [[_ wo-extension] (split-path path)
+        out (str out-dir "/" wo-extension ".avif")
+        med-out (str out-dir "/" wo-extension "_medium.avif")]
+    (println (sh "magick" "convert" (str src-dir "/" path) out))
+    (println (sh "magick" "convert" "-resize" "50%" (str src-dir "/" path) med-out))))
