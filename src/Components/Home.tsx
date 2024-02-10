@@ -6,10 +6,12 @@ import { FocusImage } from './Focus';
 type Image = { title: string; layout: string };
 const sectionSeparator = 'mt-12 md:mt-16 lg:mt-32';
 const images: Image[] = [
+  { title: 'superpower', layout: 'col-span-4 md:col-span-2 md:col-start-2' },
   { title: 'dino', layout: 'col-span-4' },
   { title: 'painting', layout: 'col-span-2' },
   { title: 'widdo', layout: `col-span-2` },
-  { title: 'mirror', layout: `col-span-4 ${sectionSeparator}` },
+  { title: 'mira', layout: `col-span-4 md:col-span-2 md:col-start-2 ${sectionSeparator}`},
+  { title: 'mirror', layout: `col-span-4` },
   { title: 'character', layout: 'col-span-2' },
   { title: 'guy', layout: 'col-span-2' },
   { title: 'void', layout: `col-span-4` },
@@ -26,7 +28,7 @@ type GalleryProps = {
   onClick: Setter<PageFocus>;
 };
 
-const galleryImageBaseClass = 'shadow-sm w-full h-auto';
+const galleryImageBaseClass = (shadow: boolean) => `${shadow ? 'shadow-md' : ''} w-full h-auto`;
 
 const Gallery = ({ onClick }: GalleryProps) => {
   return (
@@ -41,7 +43,7 @@ const Gallery = ({ onClick }: GalleryProps) => {
               click={() => {
                 onClick(title);
               }}
-              className={galleryImageBaseClass}
+              className={galleryImageBaseClass(!(title === 'mira' || title === 'superpower'))}
             />
           );
         }}

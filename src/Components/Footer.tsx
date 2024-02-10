@@ -60,35 +60,57 @@ const LinkedIn = () => {
 };
 
 const Mail = () => {
-  return <svg
-    xmlns="http://www.w3.org/2000/svg"
-    width="24"
-    height="24"
-    viewBox="0 0 24 24"
-    fill="none"
-    stroke="currentColor"
-    stroke-width="2"
-    stroke-linecap="round"
-    stroke-linejoin="round"
-    class="w-6 h-6 md:w-8 md:h-8 lg:w-12 lg:h-12"
-  >
-    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
-    <polyline points="22,6 12,13 2,6"></polyline>
-  </svg>;
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width="24"
+      height="24"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      stroke-width="2"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+      class="w-6 h-6 md:w-8 md:h-8 lg:w-12 lg:h-12"
+    >
+      <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+      <polyline points="22,6 12,13 2,6"></polyline>
+    </svg>
+  );
 };
-
-// No LinkedIn currently, add when Kiggy makes an account :)
 
 const Footer = () => {
   return (
-    <footer class="flex justify-center items-center space-x-8 lg:space-x-16 bg-slate-50 p-4">
-      <a href="https://instagram.com/k1ggy" target="_blank" rel="noopener noreferrer">
+    <footer
+      aria-label="Social media links"
+      class="flex justify-center items-center space-x-8 lg:space-x-16 bg-slate-50 p-4 my-4"
+    >
+      <a
+        aria-label="Link to artist's Instagram"
+        href="https://instagram.com/k1ggy"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
         <Instagram />
       </a>
-      <a href="https://twitter.com/k1ggy" target="_blank" rel="noopener noreferrer">
+      <a
+        aria-label="Link to artist's Twitter"
+        href="https://twitter.com/kiggington"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
         <Twitter />
       </a>
       <a
+        aria-label="Link to artist's Linkedin"
+        href="https://www.linkedin.com/in/kristen-rankin-63923a1a3"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <LinkedIn />
+      </a>
+      <a
+        aria-label="Link to artist's email"
         href="mailto:kristen.rankinarts@gmail.com"
         target="_blank"
         rel="noopener noreferrer"
