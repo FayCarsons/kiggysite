@@ -26,7 +26,7 @@ type GalleryProps = {
   onClick: Setter<PageFocus>;
 };
 
-const galleryImageBaseClass = 'shadow-sm w-auto h-auto';
+const galleryImageBaseClass = 'shadow-sm w-full h-auto';
 
 const Gallery = ({ onClick }: GalleryProps) => {
   return (
@@ -35,7 +35,7 @@ const Gallery = ({ onClick }: GalleryProps) => {
         {({ title, layout }) => {
           return (
             <LazyImage
-              parentClass={`max-h-fit ${layout}`}
+              parentClass={`h-auto w-auto ${layout}`}
               id={title}
               title={getImagePath(title, ImageSize.Gallery, Page.Home)}
               click={() => {
