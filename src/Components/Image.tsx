@@ -17,7 +17,7 @@ const sizeToPath: { [key: number]: string } = {
 
 // Get PNG icons
 export const getIconPath = (title: string): string => {
-  return `./icons/${title}.png`;
+  return `./icons/${title}.avif`;
 };
 
 // Get large WEBP images for gallery and single image view
