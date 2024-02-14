@@ -78,6 +78,7 @@ export const LazyImage = (props: LazyImageProps) => {
   return (
     <div class={props.parentClass} ref={containerRef}>
       <img
+        alt={`Drawing titled: ${props.id}`}
         src={isVisibile() ? props.title : undefined}
         id={props.id}
         class={initClass}

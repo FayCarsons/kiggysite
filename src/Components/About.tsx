@@ -1,7 +1,7 @@
 export const About = () => {
   return (
     <div class="relative w-full">
-      <img src='/images/about/kiggy-full.avif' class="block h-auto w-full" alt="Background" />
+      <img src='/images/about/kiggy-full.avif' class="block h-auto w-full" alt="Background of about page blurb, picture of artist and gradient below text" />
       <div class="absolute left-1/2 top-1/2 mt-4 w-4/5 -translate-x-1/2 -translate-y-1/2 transform text-left">
         <p class="prose w-1/2 text-wrap font-palatino text-xxs text-black sm:text-xs md:text-sm lg:text-lg xl:text-xl">
           I'm Kristen, welcome to my portfolio site! <br /> I am currently

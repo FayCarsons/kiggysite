@@ -8,10 +8,12 @@ export const Header = () => {
   return (
     <header class="mt-8 flex w-screen flex-col items-center justify-center mb-8 md:mb-24">
       <img
+        alt="Logo"
         class="mb-2 aspect-auto h-5/6 w-1/4 object-fill"
         src={getIconPath('logo')}
       />
       <img
+        alt="Name icon"
         class="mb-2 h-3/4 w-8/12 sm:w-1/2 object-cover"
         src={getIconPath('title')}
       />
