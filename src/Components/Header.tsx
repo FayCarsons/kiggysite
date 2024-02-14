@@ -20,7 +20,7 @@ export const Header = () => {
       <p class={`mb-4 font-palatino tracking-[0.5em] md:mb-8 ${textSizing}`}>
         Visual Development and Illustration
       </p>
-      <div class="flew-row space-between flex justify-between space-x-4 sm:space-x-6 md:space-x-8 lg:space-x-10 xl:space-x-12">
+      <nav class="flew-row space-between flex justify-between space-x-4 sm:space-x-6 md:space-x-8 lg:space-x-10 xl:space-x-12">
         <a class={navClass} href="/">
           home
         </a>
@@ -32,7 +32,7 @@ export const Header = () => {
         <a class={navClass} href="/about">
           about
         </a>
-      </div>
+      </nav>
     </header>
   );
 };

@@ -55,7 +55,7 @@ const Gallery = ({ onClick }: GalleryProps) => {
 export const Home = () => {
   const [focus, setFocus] = createSignal<PageFocus>(null);
   return (
-    <div class="bg-slate-50">
+    <section class="bg-slate-50">
       <Show
         when={focus()}
         fallback={
@@ -66,7 +66,7 @@ export const Home = () => {
       >
         <FocusImage title={focus() as string} onClick={setFocus} page={Page.Home} />
       </Show>
-    </div>
+    </section>
   );
 };
 

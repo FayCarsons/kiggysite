@@ -78,7 +78,7 @@ type GalleryProps = {
 };
 const HeavyJan = (props: GalleryProps) => {
   return (
-    <div class="mx-12 grid grid-cols-4 gap-2">
+    <section class="mx-12 grid grid-cols-4 gap-2">
       <For each={heavyJan}>
         {(title) => (
           <LazyImage
@@ -89,13 +89,13 @@ const HeavyJan = (props: GalleryProps) => {
           />
         )}
       </For>
-    </div>
+    </section>
   );
 };
 
 const PersonalWorks = (props: GalleryProps) => {
   return (
-    <div class="mx-12 mb-8 lg:mb-16 grid grid-cols-4 gap-4">
+    <section class="mx-12 mb-8 lg:mb-16 grid grid-cols-4 gap-4">
       <For each={personal}>
         {({ title, layout }) => (
           <LazyImage
@@ -106,7 +106,7 @@ const PersonalWorks = (props: GalleryProps) => {
           />
         )}
       </For>
-    </div>
+    </section>
   );
 };
 
