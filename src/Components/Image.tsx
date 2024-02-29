@@ -84,6 +84,11 @@ export const LazyImage = (props: LazyImageProps) => {
     small: `./images/${props.page.valueOf()}/${props.title}_small.avif`
   };
 
+  const alt = {
+    'mira': 'title card for project \'Mira\'',
+    'superpower': 'title card for project \'superpower\''
+  }[props.title] ?? `A digital art piece titled \"${props.title}\"`;
+
   return (
     <div class={props.parentClass} ref={containerRef}>
       <picture>
@@ -91,7 +96,7 @@ export const LazyImage = (props: LazyImageProps) => {
         <source media={`(min-width: ${medium}px)`} srcset={paths['medium']} type='image/avif' />
         <img
           src={paths['small']}
-          alt={`A digital art-piece titled ${props.title}`}
+          alt={alt}
           id={props.id}
           class={initClass}
           onclick={props.click}
