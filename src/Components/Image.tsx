@@ -64,29 +64,21 @@ export const LazyImage = (props: LazyImageProps) => {
   });
 
   const sizes = imageSizeMap[props.page][props.title];
-  //console.log(props.title, ":\n");
-  //console.table(sizes);
 
   const wWidth = window.innerWidth;
 
   let resolution: Resolution;
 
+  const medium = 481;
+  const large = 1025;
 
-  if (props.title !== 'mira' && props.title !== 'superpower') {
-    if (wWidth < 480) resolution = sizes['small'];
-    else if (wWidth < 768) resolution = sizes['medium'];
-    else if (wWidth < 1200) resolution = sizes['large'];
-    else resolution = sizes['original'];
-  } else {
-    resolution = { width: 1200, height: 400 };
-  }
-
-  //console.log(`Resolution of image ${props.title} is ${resolution.width}x${resolution.height}`);
+  if (wWidth < medium) resolution = sizes.small
+  else if (wWidth < large) resolution = sizes.medium
+  else resolution = sizes.large
 
   const { width, height } = resolution;
 
   const paths = {
-    original: `./images/${props.page.valueOf()}/${props.title}.avif`,
     large: `./images/${props.page.valueOf()}/${props.title}_large.avif`,
     medium: `./images/${props.page.valueOf()}/${props.title}_medium.avif`,
     small: `./images/${props.page.valueOf()}/${props.title}_small.avif`
@@ -95,9 +87,8 @@ export const LazyImage = (props: LazyImageProps) => {
   return (
     <div class={props.parentClass} ref={containerRef}>
       <picture>
-        <source media='(min-width: 1200px)' srcset={paths['original']} type='image/avif' />
-        <source media='(min-width: 768px)' srcset={paths['large']} type='image/avif' />
-        <source media='(min-width: 480px)' srcset={paths['medium']} type='image/avif' />
+        <source media={`(min-width: ${large}px)`} srcset={paths['large']} type='image/avif' />
+        <source media={`(min-width: ${medium}px)`} srcset={paths['medium']} type='image/avif' />
         <img
           src={paths['small']}
           alt={`A digital art-piece titled ${props.title}`}
