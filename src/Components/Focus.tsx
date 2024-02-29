@@ -1,6 +1,6 @@
 import { Ref, Setter, onCleanup, onMount } from "solid-js";
 import { Page, PageFocus } from "../lib";
-import { ImageSize, getImagePath } from "./Image";
+import { ImageSize } from "./Image";
 
 type FocusProps = {
   title: string;
@@ -34,7 +34,7 @@ export const FocusImage = ({ title, page, onClick }: FocusProps) => {
       <div class="mx-4 flex flex-col items-center justify-center">
         <img
           id={title}
-          src={getImagePath(title, ImageSize.Focus, page)}
+          src={`images/${page}/${title}.avif`}
           class={focusBaseClass}
           onClick={() => onClick(null)}
           ref={imageRef}

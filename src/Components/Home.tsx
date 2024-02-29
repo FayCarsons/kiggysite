@@ -1,16 +1,15 @@
 import { createSignal, For, Setter, Show } from 'solid-js';
-import { ImageSize, LazyImage, getImagePath } from './Image';
+import { LazyImage } from './Image';
 import { Page, type PageFocus } from '../lib';
 import { FocusImage } from './Focus';
 
-type Image = { title: string; layout: string };
 const sectionSeparator = 'mt-12 md:mt-16 lg:mt-32';
-const images: Image[] = [
+const images = [
   { title: 'superpower', layout: 'col-span-4 md:col-span-2 md:col-start-2' },
   { title: 'dino', layout: 'col-span-4' },
   { title: 'painting', layout: 'col-span-2' },
   { title: 'widdo', layout: `col-span-2` },
-  { title: 'mira', layout: `col-span-4 md:col-span-2 md:col-start-2 ${sectionSeparator}`},
+  { title: 'mira', layout: `col-span-4 md:col-span-2 md:col-start-2 ${sectionSeparator}` },
   { title: 'mirror', layout: `col-span-4` },
   { title: 'character', layout: 'col-span-2' },
   { title: 'guy', layout: 'col-span-2' },
@@ -21,7 +20,7 @@ const images: Image[] = [
   { title: 'porch-value', layout: `col-span-2` },
   { title: 'porch-sketch', layout: `col-span-2` },
   { title: 'barn', layout: `col-span-4 ${sectionSeparator}` },
-  { title: 'owl', layout: 'col-span-4' },
+  { title: 'owl', layout: `col-span-4 ${sectionSeparator}` },
 ];
 
 type GalleryProps = {
@@ -39,7 +38,8 @@ const Gallery = ({ onClick }: GalleryProps) => {
             <LazyImage
               parentClass={`h-auto w-auto ${layout}`}
               id={title}
-              title={getImagePath(title, ImageSize.Gallery, Page.Home)}
+              title={title}
+              page={Page.Home}
               click={() => {
                 onClick(title);
               }}

@@ -1,19 +1,15 @@
-import { Ref, createSignal, onCleanup } from 'solid-js';
-import { Page, pageToPath } from '../lib'
+import { Ref, createSignal, onCleanup, Show } from 'solid-js';
+import { Page, imageSizeMap } from '../lib'
+import { ImageSizing, Resolution } from '../image-types';
 
 export const enum ImageSize {
   Gallery = '_medium',
   Focus = '',
 }
 
-// Get PNG icons
+// Get AVIF icons
 export const getIconPath = (title: string): string => {
   return `./icons/${title}.avif`;
-};
-
-// Get large WEBP images for gallery and single image view
-export const getImagePath = (title: string, size: ImageSize, page: Page): string => {
-  return `./images/${pageToPath[page]}/${title}${size}.avif`;
 };
 
 const createObserver = (callback: (_: any) => any, options = {}) => {
@@ -29,13 +25,14 @@ const createObserver = (callback: (_: any) => any, options = {}) => {
 interface LazyImageProps {
   id?: string;
   title: string;
+  page: Page;
   className?: string;
   click?: () => void;
   onload?: any;
   parentClass: string;
 }
 export const LazyImage = (props: LazyImageProps) => {
-  const [isVisibile, setVisible] = createSignal<boolean>(false);
+  const [isVisible, setVisible] = createSignal<boolean>(false);
 
   const observer = createObserver((entries) => {
     entries.forEach((entry: any) => {
@@ -50,14 +47,13 @@ export const LazyImage = (props: LazyImageProps) => {
   const initClass = `${baseClass} opacity-0`;
   const loadClass = `${baseClass} opacity-100`;
 
-  let containerRef = (parent: Ref<HTMLDivElement>) => {
+  const containerRef = (parent: Ref<HTMLDivElement>) => {
     if (parent) observer.observe(parent as HTMLDivElement);
   };
 
   const imageRef = (el: HTMLImageElement) => {
     if (el) {
       el.onload = () => {
-        el.className = '';
         el.className = loadClass;
       };
     }
@@ -66,16 +62,53 @@ export const LazyImage = (props: LazyImageProps) => {
   onCleanup(() => {
     observer.disconnect();
   });
+
+  const sizes = imageSizeMap[props.page][props.title];
+  //console.log(props.title, ":\n");
+  //console.table(sizes);
+
+  const wWidth = window.innerWidth;
+
+  let resolution: Resolution;
+
+
+  if (props.title !== 'mira' && props.title !== 'superpower') {
+    if (wWidth < 480) resolution = sizes['small'];
+    else if (wWidth < 768) resolution = sizes['medium'];
+    else if (wWidth < 1200) resolution = sizes['large'];
+    else resolution = sizes['original'];
+  } else {
+    resolution = { width: 1200, height: 400 };
+  }
+
+  //console.log(`Resolution of image ${props.title} is ${resolution.width}x${resolution.height}`);
+
+  const { width, height } = resolution;
+
+  const paths = {
+    original: `./images/${props.page.valueOf()}/${props.title}.avif`,
+    large: `./images/${props.page.valueOf()}/${props.title}_large.avif`,
+    medium: `./images/${props.page.valueOf()}/${props.title}_medium.avif`,
+    small: `./images/${props.page.valueOf()}/${props.title}_small.avif`
+  };
+
   return (
     <div class={props.parentClass} ref={containerRef}>
-      <img
-        alt={`Drawing titled: ${props.id}`}
-        src={isVisibile() ? props.title : undefined}
-        id={props.id}
-        class={initClass}
-        onclick={props.click}
-        ref={imageRef}
-      />
+      <picture>
+        <source media='(min-width: 1200px)' srcset={paths['original']} type='image/avif' />
+        <source media='(min-width: 768px)' srcset={paths['large']} type='image/avif' />
+        <source media='(min-width: 480px)' srcset={paths['medium']} type='image/avif' />
+        <img
+          src={paths['small']}
+          alt={`A digital art-piece titled ${props.title}`}
+          id={props.id}
+          class={initClass}
+          onclick={props.click}
+          ref={imageRef}
+          width={width}
+          height={height}
+        />
+      </picture>
     </div>
   );
 };

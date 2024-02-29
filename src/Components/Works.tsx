@@ -1,6 +1,6 @@
 import { Page, type PageFocus } from '../lib';
 import { For, Setter, Show, createSignal } from 'solid-js';
-import { ImageSize, LazyImage, getImagePath } from './Image';
+import { ImageSize, LazyImage } from './Image';
 import { FocusImage } from './Focus';
 
 const heavyJan = [
@@ -83,9 +83,10 @@ const HeavyJan = (props: GalleryProps) => {
         {(title) => (
           <LazyImage
             parentClass="aspect-square"
-            title={getImagePath(title, ImageSize.Gallery, Page.Works)}
+            title={title}
             className={hjImageBaseClass}
             click={() => props.click(title)}
+            page={Page.Works}
           />
         )}
       </For>
@@ -100,9 +101,10 @@ const PersonalWorks = (props: GalleryProps) => {
         {({ title, layout }) => (
           <LazyImage
             parentClass={layout}
-            title={getImagePath(title, ImageSize.Gallery, Page.Works)}
+            title={title}
             className="h-auto w-full"
             click={() => props.click(title)}
+            page={Page.Works}
           />
         )}
       </For>
@@ -119,7 +121,7 @@ export const Works = () => {
         when={focus()}
         fallback={
           <div class="mb-12 flex flex-col items-center justify-center">
-            <Section title="#heavyjan2024" topMargin={TopMargin.Small}/>
+            <Section title="#heavyjan2024" topMargin={TopMargin.Small} />
             <HeavyJan click={setFocus} />
             <Section title="Personal works" topMargin={TopMargin.Large} />
             <PersonalWorks click={setFocus} />
