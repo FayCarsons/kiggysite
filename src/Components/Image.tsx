@@ -1,6 +1,6 @@
 import { Ref, createSignal, onCleanup, Show } from 'solid-js';
 import { Page, imageSizeMap } from '../lib'
-import { ImageSizing, Resolution } from '../image-types';
+import { Resolution } from '../image-types.ts';
 
 export const enum ImageSize {
   Gallery = '_medium',

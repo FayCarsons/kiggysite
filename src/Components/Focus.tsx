@@ -25,9 +25,13 @@ export const FocusImage = ({ title, page, onClick }: FocusProps) => {
     }
 
     window.onmousedown = () => onClick(null)
+
+    onCleanup(() => {
+      window.onmousedown = null;
+    })
   });
 
-  onCleanup(() => window.onmousedown = null)
+
 
   return (
     <div class="my-16 flex h-screen flex-col justify-start">

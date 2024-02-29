@@ -41,6 +41,7 @@ const Gallery = ({ onClick }: GalleryProps) => {
               title={title}
               page={Page.Home}
               click={() => {
+                if (title === 'mira' || title === 'superpower') return;
                 onClick(title);
               }}
               className={galleryImageBaseClass(!(title === 'mira' || title === 'superpower'))}
