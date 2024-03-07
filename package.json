@@ -5,9 +5,9 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "opt-about": "npm run image-opt -- -i dev/images/about -o public/images/about --yes --js src",
-    "opt-home": "npm run image-opt -- -i dev/images/home -o public/images/home --yes --js src",
-    "opt-works": "npm run image-opt -- -i dev/images/works -o public/images/works --yes --js src",
+    "opt-about": "npm run image-opt -- -i dev/images/about -o public/images/about --yes --js src --scale 20,40,60",
+    "opt-home": "npm run image-opt -- -i dev/images/home -o public/images/home --yes --js src --scale 20,40,60",
+    "opt-works": "npm run image-opt -- -i dev/images/works -o public/images/works --yes --js src --scale 20,40,60",
     "build-images": "npm run opt-about && npm run opt-home && npm run opt-works",
     "build": "tsc && vite build",
     "preview": "vite preview",

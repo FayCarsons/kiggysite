@@ -12,12 +12,12 @@ export const  about: SizeMap = {
       "height": 402
     },
     "medium": {
-      "width": 343,
-      "height": 201
+      "width": 458,
+      "height": 268
     },
     "small": {
-      "width": 171,
-      "height": 100
+      "width": 229,
+      "height": 134
     }
   }
 };
