@@ -2,6 +2,222 @@
 import type { SizeMap } from './image-types.ts'
        
 export const  home: SizeMap = {
+  "hj_snow": {
+    "original": {
+      "width": 3000,
+      "height": 2000
+    },
+    "large": {
+      "width": 1800,
+      "height": 1200
+    },
+    "medium": {
+      "width": 1200,
+      "height": 800
+    },
+    "small": {
+      "width": 600,
+      "height": 400
+    }
+  },
+  "porch": {
+    "original": {
+      "width": 4800,
+      "height": 2700
+    },
+    "large": {
+      "width": 2880,
+      "height": 1620
+    },
+    "medium": {
+      "width": 1920,
+      "height": 1080
+    },
+    "small": {
+      "width": 960,
+      "height": 540
+    }
+  },
+  "dino": {
+    "original": {
+      "width": 3282,
+      "height": 1980
+    },
+    "large": {
+      "width": 1969,
+      "height": 1188
+    },
+    "medium": {
+      "width": 1312,
+      "height": 792
+    },
+    "small": {
+      "width": 656,
+      "height": 396
+    }
+  },
+  "mira-rows": {
+    "original": {
+      "width": 5244,
+      "height": 1967
+    },
+    "large": {
+      "width": 3146,
+      "height": 1180
+    },
+    "medium": {
+      "width": 2097,
+      "height": 786
+    },
+    "small": {
+      "width": 1048,
+      "height": 393
+    }
+  },
+  "barn": {
+    "original": {
+      "width": 5100,
+      "height": 3580
+    },
+    "large": {
+      "width": 3060,
+      "height": 2148
+    },
+    "medium": {
+      "width": 2040,
+      "height": 1432
+    },
+    "small": {
+      "width": 1020,
+      "height": 716
+    }
+  },
+  "tree-bw": {
+    "original": {
+      "width": 5100,
+      "height": 2896
+    },
+    "large": {
+      "width": 3060,
+      "height": 1737
+    },
+    "medium": {
+      "width": 2040,
+      "height": 1158
+    },
+    "small": {
+      "width": 1020,
+      "height": 579
+    }
+  },
+  "widdo": {
+    "original": {
+      "width": 4276,
+      "height": 2048
+    },
+    "large": {
+      "width": 2565,
+      "height": 1228
+    },
+    "medium": {
+      "width": 1710,
+      "height": 819
+    },
+    "small": {
+      "width": 855,
+      "height": 409
+    }
+  },
+  "mira": {
+    "original": {
+      "width": 10501,
+      "height": 2095
+    },
+    "large": {
+      "width": 6300,
+      "height": 1257
+    },
+    "medium": {
+      "width": 4200,
+      "height": 838
+    },
+    "small": {
+      "width": 2100,
+      "height": 419
+    }
+  },
+  "hj_snowpond": {
+    "original": {
+      "width": 3200,
+      "height": 1800
+    },
+    "large": {
+      "width": 1920,
+      "height": 1080
+    },
+    "medium": {
+      "width": 1280,
+      "height": 720
+    },
+    "small": {
+      "width": 640,
+      "height": 360
+    }
+  },
+  "mira-bw2": {
+    "original": {
+      "width": 1919,
+      "height": 776
+    },
+    "large": {
+      "width": 1151,
+      "height": 465
+    },
+    "medium": {
+      "width": 767,
+      "height": 310
+    },
+    "small": {
+      "width": 383,
+      "height": 155
+    }
+  },
+  "mira-bw1": {
+    "original": {
+      "width": 1919,
+      "height": 776
+    },
+    "large": {
+      "width": 1151,
+      "height": 465
+    },
+    "medium": {
+      "width": 767,
+      "height": 310
+    },
+    "small": {
+      "width": 383,
+      "height": 155
+    }
+  },
+  "void": {
+    "original": {
+      "width": 2561,
+      "height": 2050
+    },
+    "large": {
+      "width": 1536,
+      "height": 1230
+    },
+    "medium": {
+      "width": 1024,
+      "height": 820
+    },
+    "small": {
+      "width": 512,
+      "height": 410
+    }
+  },
   "owl": {
     "original": {
       "width": 2732,
@@ -38,76 +254,22 @@ export const  home: SizeMap = {
       "height": 253
     }
   },
-  "porch": {
+  "porch-sketch": {
     "original": {
-      "width": 4800,
-      "height": 2700
+      "width": 3513,
+      "height": 2646
     },
     "large": {
-      "width": 2880,
-      "height": 1620
+      "width": 2107,
+      "height": 1587
     },
     "medium": {
-      "width": 1920,
-      "height": 1080
+      "width": 1405,
+      "height": 1058
     },
     "small": {
-      "width": 960,
-      "height": 540
-    }
-  },
-  "widdo": {
-    "original": {
-      "width": 4276,
-      "height": 2048
-    },
-    "large": {
-      "width": 2565,
-      "height": 1228
-    },
-    "medium": {
-      "width": 1710,
-      "height": 819
-    },
-    "small": {
-      "width": 855,
-      "height": 409
-    }
-  },
-  "character": {
-    "original": {
-      "width": 2115,
-      "height": 2662
-    },
-    "large": {
-      "width": 1269,
-      "height": 1597
-    },
-    "medium": {
-      "width": 846,
-      "height": 1064
-    },
-    "small": {
-      "width": 423,
-      "height": 532
-    }
-  },
-  "mira": {
-    "original": {
-      "width": 10501,
-      "height": 2095
-    },
-    "large": {
-      "width": 6300,
-      "height": 1257
-    },
-    "medium": {
-      "width": 4200,
-      "height": 838
-    },
-    "small": {
-      "width": 2100,
-      "height": 419
+      "width": 702,
+      "height": 529
     }
   },
   "porch-value": {
@@ -128,6 +290,24 @@ export const  home: SizeMap = {
       "height": 273
     }
   },
+  "tree": {
+    "original": {
+      "width": 5100,
+      "height": 2896
+    },
+    "large": {
+      "width": 3060,
+      "height": 1737
+    },
+    "medium": {
+      "width": 2040,
+      "height": 1158
+    },
+    "small": {
+      "width": 1020,
+      "height": 579
+    }
+  },
   "guy": {
     "original": {
       "width": 2146,
@@ -146,40 +326,22 @@ export const  home: SizeMap = {
       "height": 354
     }
   },
-  "painting": {
+  "character": {
     "original": {
-      "width": 3521,
-      "height": 2640
+      "width": 2115,
+      "height": 2662
     },
     "large": {
-      "width": 2112,
-      "height": 1584
+      "width": 1269,
+      "height": 1597
     },
     "medium": {
-      "width": 1408,
-      "height": 1056
+      "width": 846,
+      "height": 1064
     },
     "small": {
-      "width": 704,
-      "height": 528
-    }
-  },
-  "barn": {
-    "original": {
-      "width": 5100,
-      "height": 3580
-    },
-    "large": {
-      "width": 3060,
-      "height": 2148
-    },
-    "medium": {
-      "width": 2040,
-      "height": 1432
-    },
-    "small": {
-      "width": 1020,
-      "height": 716
+      "width": 423,
+      "height": 532
     }
   },
   "superpower": {
@@ -200,94 +362,22 @@ export const  home: SizeMap = {
       "height": 214
     }
   },
-  "void": {
+  "painting": {
     "original": {
-      "width": 2561,
-      "height": 2050
+      "width": 3521,
+      "height": 2640
     },
     "large": {
-      "width": 1536,
-      "height": 1230
+      "width": 2112,
+      "height": 1584
     },
     "medium": {
-      "width": 1024,
-      "height": 820
+      "width": 1408,
+      "height": 1056
     },
     "small": {
-      "width": 512,
-      "height": 410
-    }
-  },
-  "tree": {
-    "original": {
-      "width": 5100,
-      "height": 2896
-    },
-    "large": {
-      "width": 3060,
-      "height": 1737
-    },
-    "medium": {
-      "width": 2040,
-      "height": 1158
-    },
-    "small": {
-      "width": 1020,
-      "height": 579
-    }
-  },
-  "tree-bw": {
-    "original": {
-      "width": 5100,
-      "height": 2896
-    },
-    "large": {
-      "width": 3060,
-      "height": 1737
-    },
-    "medium": {
-      "width": 2040,
-      "height": 1158
-    },
-    "small": {
-      "width": 1020,
-      "height": 579
-    }
-  },
-  "porch-sketch": {
-    "original": {
-      "width": 3513,
-      "height": 2646
-    },
-    "large": {
-      "width": 2107,
-      "height": 1587
-    },
-    "medium": {
-      "width": 1405,
-      "height": 1058
-    },
-    "small": {
-      "width": 702,
-      "height": 529
-    }
-  },
-  "dino": {
-    "original": {
-      "width": 3282,
-      "height": 1980
-    },
-    "large": {
-      "width": 1969,
-      "height": 1188
-    },
-    "medium": {
-      "width": 1312,
-      "height": 792
-    },
-    "small": {
-      "width": 656,
-      "height": 396
+      "width": 704,
+      "height": 528
     }
   }
 };

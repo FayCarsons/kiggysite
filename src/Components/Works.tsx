@@ -6,7 +6,6 @@ import { FocusImage } from './Focus';
 const heavyJan = [
   'hj_block',
   'hj_laundry',
-  'hj_snow',
   'hj_aquarium',
   'hj_flowers',
   'hj_beach',
@@ -14,7 +13,6 @@ const heavyJan = [
   'hj_pond',
   'hj_couch',
   'hj_forest',
-  'hj_snowpond',
   'hj_liminal',
   'hj_glacier',
   'hj_bathroom',

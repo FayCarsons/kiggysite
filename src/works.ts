@@ -2,76 +2,22 @@
 import type { SizeMap } from './image-types.ts'
        
 export const  works: SizeMap = {
-  "hj_block": {
+  "hj_river": {
     "original": {
-      "width": 5200,
-      "height": 3000
+      "width": 2500,
+      "height": 3500
     },
     "large": {
-      "width": 3120,
-      "height": 1800
+      "width": 1500,
+      "height": 2100
     },
     "medium": {
-      "width": 2080,
-      "height": 1200
+      "width": 1000,
+      "height": 1400
     },
     "small": {
-      "width": 1040,
-      "height": 600
-    }
-  },
-  "hj_snowpond": {
-    "original": {
-      "width": 3200,
-      "height": 1800
-    },
-    "large": {
-      "width": 1920,
-      "height": 1080
-    },
-    "medium": {
-      "width": 1280,
-      "height": 720
-    },
-    "small": {
-      "width": 640,
-      "height": 360
-    }
-  },
-  "bells": {
-    "original": {
-      "width": 797,
-      "height": 1242
-    },
-    "large": {
-      "width": 478,
-      "height": 745
-    },
-    "medium": {
-      "width": 318,
-      "height": 496
-    },
-    "small": {
-      "width": 159,
-      "height": 248
-    }
-  },
-  "hj_impress": {
-    "original": {
-      "width": 2000,
-      "height": 2500
-    },
-    "large": {
-      "width": 1200,
-      "height": 1500
-    },
-    "medium": {
-      "width": 800,
-      "height": 1000
-    },
-    "small": {
-      "width": 400,
-      "height": 500
+      "width": 500,
+      "height": 700
     }
   },
   "hj_couch": {
@@ -92,24 +38,6 @@ export const  works: SizeMap = {
       "height": 237
     }
   },
-  "hj_liminal": {
-    "original": {
-      "width": 2000,
-      "height": 1125
-    },
-    "large": {
-      "width": 1200,
-      "height": 675
-    },
-    "medium": {
-      "width": 800,
-      "height": 450
-    },
-    "small": {
-      "width": 400,
-      "height": 225
-    }
-  },
   "sailor": {
     "original": {
       "width": 1946,
@@ -128,40 +56,22 @@ export const  works: SizeMap = {
       "height": 459
     }
   },
-  "hj_trees": {
+  "cat": {
     "original": {
-      "width": 2000,
-      "height": 2000
+      "width": 1999,
+      "height": 2518
     },
     "large": {
-      "width": 1200,
-      "height": 1200
+      "width": 1199,
+      "height": 1510
     },
     "medium": {
-      "width": 800,
-      "height": 800
+      "width": 799,
+      "height": 1007
     },
     "small": {
-      "width": 400,
-      "height": 400
-    }
-  },
-  "ethan": {
-    "original": {
-      "width": 3468,
-      "height": 2475
-    },
-    "large": {
-      "width": 2080,
-      "height": 1485
-    },
-    "medium": {
-      "width": 1387,
-      "height": 990
-    },
-    "small": {
-      "width": 693,
-      "height": 495
+      "width": 399,
+      "height": 503
     }
   },
   "hj_forest": {
@@ -200,76 +110,76 @@ export const  works: SizeMap = {
       "height": 200
     }
   },
-  "hj_sunset": {
+  "hj_impress": {
     "original": {
-      "width": 3500,
+      "width": 2000,
       "height": 2500
     },
     "large": {
-      "width": 2100,
+      "width": 1200,
       "height": 1500
     },
     "medium": {
-      "width": 1400,
+      "width": 800,
       "height": 1000
     },
     "small": {
-      "width": 700,
+      "width": 400,
       "height": 500
     }
   },
-  "hj_restaurant": {
+  "hj_graffiti": {
     "original": {
-      "width": 3000,
+      "width": 1200,
+      "height": 1500
+    },
+    "large": {
+      "width": 720,
+      "height": 900
+    },
+    "medium": {
+      "width": 480,
+      "height": 600
+    },
+    "small": {
+      "width": 240,
+      "height": 300
+    }
+  },
+  "hj_trees": {
+    "original": {
+      "width": 2000,
       "height": 2000
     },
     "large": {
-      "width": 1800,
+      "width": 1200,
       "height": 1200
     },
     "medium": {
-      "width": 1200,
+      "width": 800,
       "height": 800
     },
     "small": {
-      "width": 600,
+      "width": 400,
       "height": 400
     }
   },
-  "note": {
+  "moth": {
     "original": {
-      "width": 2503,
-      "height": 3403
+      "width": 2048,
+      "height": 2048
     },
     "large": {
-      "width": 1501,
-      "height": 2041
+      "width": 1228,
+      "height": 1228
     },
     "medium": {
-      "width": 1001,
-      "height": 1361
+      "width": 819,
+      "height": 819
     },
     "small": {
-      "width": 500,
-      "height": 680
-    }
-  },
-  "ethan2": {
-    "original": {
-      "width": 2509,
-      "height": 3142
-    },
-    "large": {
-      "width": 1505,
-      "height": 1885
-    },
-    "medium": {
-      "width": 1003,
-      "height": 1256
-    },
-    "small": {
-      "width": 501,
-      "height": 628
+      "width": 409,
+      "height": 409
     }
   },
   "hj_bathroom": {
@@ -290,76 +200,76 @@ export const  works: SizeMap = {
       "height": 180
     }
   },
-  "tears": {
+  "ethan": {
     "original": {
-      "width": 2625,
-      "height": 3375
+      "width": 3468,
+      "height": 2475
     },
     "large": {
-      "width": 1575,
-      "height": 2025
+      "width": 2080,
+      "height": 1485
     },
     "medium": {
-      "width": 1050,
-      "height": 1350
+      "width": 1387,
+      "height": 990
     },
     "small": {
-      "width": 525,
-      "height": 675
+      "width": 693,
+      "height": 495
     }
   },
-  "red": {
+  "note": {
     "original": {
-      "width": 2475,
-      "height": 3675
+      "width": 2503,
+      "height": 3403
     },
     "large": {
-      "width": 1485,
-      "height": 2205
+      "width": 1501,
+      "height": 2041
     },
     "medium": {
-      "width": 990,
-      "height": 1470
+      "width": 1001,
+      "height": 1361
     },
     "small": {
-      "width": 495,
-      "height": 735
+      "width": 500,
+      "height": 680
     }
   },
-  "cat": {
+  "hj_block": {
     "original": {
-      "width": 1999,
-      "height": 2518
+      "width": 5200,
+      "height": 3000
     },
     "large": {
-      "width": 1199,
-      "height": 1510
+      "width": 3120,
+      "height": 1800
     },
     "medium": {
-      "width": 799,
-      "height": 1007
-    },
-    "small": {
-      "width": 399,
-      "height": 503
-    }
-  },
-  "hj_pond": {
-    "original": {
-      "width": 1600,
-      "height": 2000
-    },
-    "large": {
-      "width": 960,
+      "width": 2080,
       "height": 1200
     },
+    "small": {
+      "width": 1040,
+      "height": 600
+    }
+  },
+  "hj_sunset": {
+    "original": {
+      "width": 3500,
+      "height": 2500
+    },
+    "large": {
+      "width": 2100,
+      "height": 1500
+    },
     "medium": {
-      "width": 640,
-      "height": 800
+      "width": 1400,
+      "height": 1000
     },
     "small": {
-      "width": 320,
-      "height": 400
+      "width": 700,
+      "height": 500
     }
   },
   "hj_kitchen": {
@@ -380,21 +290,75 @@ export const  works: SizeMap = {
       "height": 360
     }
   },
-  "hj_beach": {
+  "groove": {
     "original": {
-      "width": 3000,
+      "width": 2048,
+      "height": 2048
+    },
+    "large": {
+      "width": 1228,
+      "height": 1228
+    },
+    "medium": {
+      "width": 819,
+      "height": 819
+    },
+    "small": {
+      "width": 409,
+      "height": 409
+    }
+  },
+  "bells": {
+    "original": {
+      "width": 797,
+      "height": 1242
+    },
+    "large": {
+      "width": 478,
+      "height": 745
+    },
+    "medium": {
+      "width": 318,
+      "height": 496
+    },
+    "small": {
+      "width": 159,
+      "height": 248
+    }
+  },
+  "red": {
+    "original": {
+      "width": 2475,
+      "height": 3675
+    },
+    "large": {
+      "width": 1485,
+      "height": 2205
+    },
+    "medium": {
+      "width": 990,
+      "height": 1470
+    },
+    "small": {
+      "width": 495,
+      "height": 735
+    }
+  },
+  "hj_aquarium": {
+    "original": {
+      "width": 1500,
       "height": 2000
     },
     "large": {
-      "width": 1800,
+      "width": 900,
       "height": 1200
     },
     "medium": {
-      "width": 1200,
+      "width": 600,
       "height": 800
     },
     "small": {
-      "width": 600,
+      "width": 300,
       "height": 400
     }
   },
@@ -416,40 +380,22 @@ export const  works: SizeMap = {
       "height": 649
     }
   },
-  "hj_aquarium": {
+  "tears": {
     "original": {
-      "width": 1500,
-      "height": 2000
+      "width": 2625,
+      "height": 3375
     },
     "large": {
-      "width": 900,
-      "height": 1200
+      "width": 1575,
+      "height": 2025
     },
     "medium": {
-      "width": 600,
-      "height": 800
+      "width": 1050,
+      "height": 1350
     },
     "small": {
-      "width": 300,
-      "height": 400
-    }
-  },
-  "hj_snow": {
-    "original": {
-      "width": 3000,
-      "height": 2000
-    },
-    "large": {
-      "width": 1800,
-      "height": 1200
-    },
-    "medium": {
-      "width": 1200,
-      "height": 800
-    },
-    "small": {
-      "width": 600,
-      "height": 400
+      "width": 525,
+      "height": 675
     }
   },
   "hj_flowers": {
@@ -470,76 +416,58 @@ export const  works: SizeMap = {
       "height": 300
     }
   },
-  "moth": {
+  "hj_liminal": {
     "original": {
-      "width": 2048,
-      "height": 2048
+      "width": 2000,
+      "height": 1125
     },
     "large": {
-      "width": 1228,
-      "height": 1228
-    },
-    "medium": {
-      "width": 819,
-      "height": 819
-    },
-    "small": {
-      "width": 409,
-      "height": 409
-    }
-  },
-  "groove": {
-    "original": {
-      "width": 2048,
-      "height": 2048
-    },
-    "large": {
-      "width": 1228,
-      "height": 1228
-    },
-    "medium": {
-      "width": 819,
-      "height": 819
-    },
-    "small": {
-      "width": 409,
-      "height": 409
-    }
-  },
-  "god": {
-    "original": {
-      "width": 2912,
-      "height": 2047
-    },
-    "large": {
-      "width": 1747,
-      "height": 1228
-    },
-    "medium": {
-      "width": 1164,
-      "height": 818
-    },
-    "small": {
-      "width": 582,
-      "height": 409
-    }
-  },
-  "hj_graffiti": {
-    "original": {
       "width": 1200,
-      "height": 1500
-    },
-    "large": {
-      "width": 720,
-      "height": 900
+      "height": 675
     },
     "medium": {
-      "width": 480,
-      "height": 600
+      "width": 800,
+      "height": 450
     },
     "small": {
-      "width": 240,
-      "height": 300
+      "width": 400,
+      "height": 225
+    }
+  },
+  "hj_beach": {
+    "original": {
+      "width": 3000,
+      "height": 2000
+    },
+    "large": {
+      "width": 1800,
+      "height": 1200
+    },
+    "medium": {
+      "width": 1200,
+      "height": 800
+    },
+    "small": {
+      "width": 600,
+      "height": 400
+    }
+  },
+  "ethan2": {
+    "original": {
+      "width": 2509,
+      "height": 3142
+    },
+    "large": {
+      "width": 1505,
+      "height": 1885
+    },
+    "medium": {
+      "width": 1003,
+      "height": 1256
+    },
+    "small": {
+      "width": 501,
+      "height": 628
     }
   },
   "spiral": {
@@ -560,22 +488,22 @@ export const  works: SizeMap = {
       "height": 525
     }
   },
-  "hj_river": {
+  "god": {
     "original": {
-      "width": 2500,
-      "height": 3500
+      "width": 2912,
+      "height": 2047
     },
     "large": {
-      "width": 1500,
-      "height": 2100
+      "width": 1747,
+      "height": 1228
     },
     "medium": {
-      "width": 1000,
-      "height": 1400
+      "width": 1164,
+      "height": 818
     },
     "small": {
-      "width": 500,
-      "height": 700
+      "width": 582,
+      "height": 409
     }
   },
   "hj_laundry": {
@@ -594,6 +522,42 @@ export const  works: SizeMap = {
     "small": {
       "width": 349,
       "height": 241
+    }
+  },
+  "hj_pond": {
+    "original": {
+      "width": 1600,
+      "height": 2000
+    },
+    "large": {
+      "width": 960,
+      "height": 1200
+    },
+    "medium": {
+      "width": 640,
+      "height": 800
+    },
+    "small": {
+      "width": 320,
+      "height": 400
+    }
+  },
+  "hj_restaurant": {
+    "original": {
+      "width": 3000,
+      "height": 2000
+    },
+    "large": {
+      "width": 1800,
+      "height": 1200
+    },
+    "medium": {
+      "width": 1200,
+      "height": 800
+    },
+    "small": {
+      "width": 600,
+      "height": 400
     }
   }
 };
