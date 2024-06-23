@@ -18,7 +18,6 @@
   },
   "dependencies": {
     "@solidjs/router": "^0.10.9",
-    "metrics": "file:../metrics",
     "solid-js": "^1.8.11"
   },
   "devDependencies": {

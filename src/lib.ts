@@ -16,3 +16,5 @@ export const imageSizeMap: Record<Page, SizeMap> = {
   [Page.Works]: works,
   [Page.About]: about
 }
+
+
