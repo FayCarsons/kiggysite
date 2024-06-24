@@ -46,13 +46,13 @@ const sendData = async (data: Data) => {
   })
 }
 
-function logUser() {
+export function logUser() {
   try {
     sendData(getData())
   } catch (e) { console.error(`Error logging user data: ${e}`) }
 }
 
-function logUserBackoff(period = 50, attempts = 0, maxAttempts = 16, exponent = 1.5) {
+export function logUserBackoff(period = 50, attempts = 0, maxAttempts = 16, exponent = 1.5) {
   try {
     sendData(getData())
   } catch (_) {
@@ -63,6 +63,5 @@ function logUserBackoff(period = 50, attempts = 0, maxAttempts = 16, exponent = 
     }, periodp)
   }
 }
-
 
 export default { logUser, logUserBackoff }

@@ -4,12 +4,12 @@ import { lazy } from 'solid-js';
 import './App.css';
 import { Header } from './Components/Header';
 import Footer from './Components/Footer'
-import Metrics from 'metrics'
+import { logUser } from './metrics'
 const Home = lazy(() => import('./Components/Home'));
 const Works = lazy(() => import('./Components/Works'));
 const About = lazy(() => import('./Components/About'));
 
-Metrics.logUserBackoff()
+logUser()
 
 render(
   () => (
