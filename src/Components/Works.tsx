@@ -21,7 +21,7 @@ const heavyJan = [
   'hj_kitchen',
   'hj_graffiti',
   'hj_impress',
-  'hj_sunset'
+  'hj_sunset',
 ];
 
 // Grouped together by layout in UI
@@ -49,22 +49,24 @@ const personal = [
 ];
 
 const enum TopMargin {
-  Large = "mt-16 lg:mt-32",
-  Small = "mt-4 lg:mt-8"
+  Large = 'mt-16 lg:mt-32',
+  Small = 'mt-4 lg:mt-8',
 }
 
 // Section Sub-header
 type SectionProps = {
   title: string;
-  topMargin: TopMargin
+  topMargin: TopMargin;
 };
 const Section = (props: SectionProps) => {
   return (
-    <div class={`mb-2 ${props.topMargin.valueOf()} flex w-full flex-col items-center justify-center`}>
-      <h2 class="font-palatino text-lg md:text-2xl lg:text-3xl tracking-widest text-black">
+    <div
+      class={`mb-2 ${props.topMargin.valueOf()} flex w-full flex-col items-center justify-center`}
+    >
+      <h2 class="font-palatino text-lg tracking-widest text-black md:text-2xl lg:text-3xl">
         {props.title}
       </h2>
-      <hr class="mb-4 mt-2 w-4/12 lg:w-3/12 border-black"></hr>
+      <hr class="mb-4 mt-2 w-4/12 border-black lg:w-3/12"></hr>
     </div>
   );
 };
@@ -94,7 +96,7 @@ const HeavyJan = (props: GalleryProps) => {
 
 const PersonalWorks = (props: GalleryProps) => {
   return (
-    <section class="mx-12 mb-8 lg:mb-16 grid grid-cols-4 gap-4">
+    <section class="mx-12 mb-8 grid grid-cols-4 gap-4 lg:mb-16">
       <For each={personal}>
         {({ title, layout }) => (
           <LazyImage

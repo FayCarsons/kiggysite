@@ -27,6 +27,7 @@ const parseUserAgent = (data: string) => {
   return { browser, device };
 }
 
+// all ur base
 const getData = () => {
   const deviceInfo = navigator.userAgent;
   const userAgent = parseUserAgent(deviceInfo);

@@ -1,12 +1,11 @@
 import { getIconPath } from './Image';
 
 export const Header = () => {
-  const textSizing = "text-xxs sm:text-xs md:text-sm lg:text-md xl:text-lg"
-  const navClass =
-    `font-palatino tracking-[0.25em] ${textSizing}`;
+  const textSizing = 'text-xxs sm:text-xs md:text-sm lg:text-md xl:text-lg';
+  const navClass = `font-palatino tracking-[0.25em] ${textSizing}`;
   const dotClass = `m-0 p-0 text-center ${textSizing}`;
   return (
-    <header class="mt-8 flex w-screen flex-col items-center justify-center mb-8 md:mb-24">
+    <header class="mb-8 mt-8 flex w-screen flex-col items-center justify-center md:mb-24">
       <img
         alt="Logo"
         class="mb-2 aspect-auto h-5/6 w-1/4 object-fill"
@@ -14,7 +13,7 @@ export const Header = () => {
       />
       <img
         alt="Name icon"
-        class="mb-2 h-3/4 w-8/12 sm:w-1/2 object-cover"
+        class="mb-2 h-3/4 w-8/12 object-cover sm:w-1/2"
         src={getIconPath('title')}
       />
       <p class={`mb-4 font-palatino tracking-[0.5em] md:mb-8 ${textSizing}`}>

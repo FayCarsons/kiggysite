@@ -3,7 +3,7 @@ import { works } from './works.ts'
 import { about } from './about.ts'
 import type { SizeMap } from './image-types.ts';
 
-export type PageFocus = null | string;
+export type PageFocus = number
 
 export const enum Page {
   Home = 'home',
@@ -17,4 +17,10 @@ export const imageSizeMap: Record<Page, SizeMap> = {
   [Page.About]: about
 }
 
+export function bound(n: number, bound: number) {
+  return ((n % bound) + bound) % bound
+}
 
+export function titleToURI_AVIF(title: string, page: Page) {
+  return `images/${page}/${title}.avif`
+}

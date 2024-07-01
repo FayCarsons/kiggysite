@@ -1,7 +1,7 @@
 
 import type { SizeMap } from './image-types.ts'
-       
-export const  home: SizeMap = {
+
+export const home: SizeMap = {
   "hj_snow": {
     "original": {
       "width": 3000,
