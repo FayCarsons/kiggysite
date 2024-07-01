@@ -71,6 +71,8 @@ const handleLayoutElt =
     } else {
       // @ts-ignore
       const { title, layout } = elt;
+      const currIndex = index.indexOf(title);
+      console.log(`title::<${title}> index::<${currIndex}>`);
       return (
         <LazyImage
           parentClass={`h-auto w-full ${layout}`}
@@ -79,7 +81,8 @@ const handleLayoutElt =
           page={Page.Home}
           click={() => {
             if (title === 'mira' || title === 'superpower') return;
-            onClick(index.indexOf(title));
+            console.log(`Clicking image: ${title} which has idx ${currIndex}`)
+            onClick(currIndex);
           }}
           className={galleryImageBaseClass}
         />
@@ -102,7 +105,7 @@ export const Home = () => {
   return (
     <section class="bg-slate-50">
       <Show
-        when={focus()}
+        when={focus() != null}
         fallback={
           <>
             <Gallery onClick={setFocus} />
